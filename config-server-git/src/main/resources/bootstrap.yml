@@ -5,10 +5,7 @@ spring:
       config:
         server:
           git:
-            uri: https://github.com/spring-cloud-samples/config-repo
-            repos:
-              - patterns: multi-repo-demo-*
-                uri: https://github.com/spring-cloud-samples/config-repo
+            uri: http://git.oschina.net/didispace/config-repo-demo/
 
 info:
   component: Config Server Git

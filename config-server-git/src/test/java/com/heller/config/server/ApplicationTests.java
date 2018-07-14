@@ -25,7 +25,7 @@ public class ApplicationTests {
     @Test
     public void testConfigServer() {
         ResponseEntity<String> entity = testRestTemplate.getForEntity(
-                "http://localhost:" + port + "/foo/development", String.class);
+                "http://localhost:" + port + "/config-client/dev/master", String.class);
 
         then(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
     }
