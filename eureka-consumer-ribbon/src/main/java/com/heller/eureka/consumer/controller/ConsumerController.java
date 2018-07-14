@@ -1,22 +1,21 @@
 package com.heller.eureka.consumer.controller;
 
+import com.heller.eureka.consumer.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 @RestController
 @RequestMapping("/consumer")
 public class ConsumerController {
 
     @Autowired
-    private RestTemplate restTemplate;
+    private HelloService helloService;
 
-    @GetMapping
-    public String dc() {
-        String url = "http://eureka-client/hello/sayHello";
-        return restTemplate.getForObject(url, String.class);
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String hello() {
+        return helloService.hello();
     }
 
 }
