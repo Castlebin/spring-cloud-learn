@@ -2,10 +2,15 @@ spring:
   application:
     name: config-client
   cloud:
-      config:
-        uri: http://localhost:8899
-        profile: default
-        label: master
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server-git
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
 
 info:
   component: Config Client
