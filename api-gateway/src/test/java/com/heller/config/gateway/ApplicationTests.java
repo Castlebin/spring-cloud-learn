@@ -1,4 +1,4 @@
-package com.heller.config.client;
+package com.heller.config.gateway;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
