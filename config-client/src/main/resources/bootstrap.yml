@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+      config:
+        uri: http://localhost:8899
+        profile: default
+        label: master
+
+info:
+  component: Config Client
+
