@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: eureka-monitor-turbine
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+turbine:
+  clusterNameExpression: new String("default")
+  # 配置要聚合的Hystrix客户端
+  appConfig: eureka-consumer, eureka-consumer-ribbon, eureka-consumer-feign
