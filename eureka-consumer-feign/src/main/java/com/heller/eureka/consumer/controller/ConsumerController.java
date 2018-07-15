@@ -13,7 +13,7 @@ public class ConsumerController {
     @Autowired
     private HelloClient helloClient;
 
-    @GetMapping
+    @GetMapping("/hello")
     public String consumer(String name) {
         return helloClient.sayHello(name);
     }
