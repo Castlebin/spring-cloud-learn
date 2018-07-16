@@ -14,8 +14,8 @@ public class ConsumerController {
     private HelloService helloService;
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public String dc() {
-        return helloService.hello();
+    public String hello(String name) {
+        return helloService.hello(name);
     }
 
 }

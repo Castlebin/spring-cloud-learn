@@ -12,13 +12,13 @@ public class HelloService {
     private RestTemplate restTemplate;
 
     @HystrixCommand(fallbackMethod = "helloFallback")
-    public String hello() {
+    public String hello(String name) {
         String url = "http://eureka-client/hello/sayHello";
-        return restTemplate.getForObject(url, String.class);
+        return restTemplate.getForObject(url+"?name={0}", String.class, name);
     }
 
-    public String helloFallback() {
-        return "error";
+    public String helloFallback(String name) {
+        return "error, " + name + " from fallback";
     }
 
 }

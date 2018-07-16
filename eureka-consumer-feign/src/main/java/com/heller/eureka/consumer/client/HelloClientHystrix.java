@@ -7,7 +7,7 @@ public class HelloClientHystrix implements HelloClient {
 
     @Override
     public String sayHello(String name) {
-        return "error, sorry, " + name;
+        return "error, " + name + " from fallback";
     }
 
 }

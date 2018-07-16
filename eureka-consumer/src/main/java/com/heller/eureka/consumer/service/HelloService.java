@@ -16,15 +16,15 @@ public class HelloService {
     private RestTemplate restTemplate;
 
     @HystrixCommand(fallbackMethod = "helloFallback")
-    public String hello() {
+    public String hello(String name) {
         ServiceInstance serviceInstance = loadBalancerClient.choose("eureka-client");
-        String url = "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/hello/sayHello";
+        String url = "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/hello/sayHello" + "?name=" + name;
         System.out.println(url);
         return restTemplate.getForObject(url, String.class);
     }
 
-    public String helloFallback() {
-        return "error";
+    public String helloFallback(String name) {
+        return "error, " + name + " from fallback";
     }
 
 }
