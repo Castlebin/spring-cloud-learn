@@ -1,0 +1,29 @@
+server:
+  port: 8769
+
+# spring.profiles.active=native 表示从本地读取配置
+# spring.cloud.config.server.native.search-locations=classpath:/shared 表示从classpath下的/shared目录查找配置文件
+
+# 去掉spring.profiles.active=native，配置 spring.cloud.config.server.git下面几个配置项 即可
+# spring.cloud.config.server.git.uri  远程git仓库地址
+# spring.cloud.config.server.git.search-paths  查找配置文件的目录
+# username, password两项看访问git仓库是否需要了
+# lable配置为master就行
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:Castlebin/config-repo.git
+          search-paths: spring-cloud-book
+          username: xxxx
+          password: xxxxxx
+      label: master
+
+# 注册到Eureka
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
