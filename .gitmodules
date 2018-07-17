@@ -1,3 +1,6 @@
 [submodule "springcloud-book"]
 	path = springcloud-book
 	url = git@github.com:forezp/springcloud-book.git
+[submodule "config-repo"]
+	path = config-repo
+	url = git@github.com:Castlebin/config-repo.git
