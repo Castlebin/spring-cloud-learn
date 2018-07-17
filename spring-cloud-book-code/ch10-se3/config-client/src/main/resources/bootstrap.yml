@@ -1,15 +1,26 @@
 # spring.application.name 配置了程序的名字
-# spring.cloud.config.uri=http://localhost:8769  表示从这里去读取配置
 # spring.profiles.active=dev  表示读取dev后缀的配置文件
 # ${spring.application.name}-${spring.profiles.active} 就是要读取的配置文件的完整名字，本例中就是config-client-dev.yml
+
+# eureka.client.service-url.default-zone 指定将本服务注册到哪个注册中心
+# 注册到enreka server上后
+# spring.cloud.config.discovery.enabled=true 表示从eureka-server上去获取配置中心地址和配置
+# spring.cloud.config.discovery.service-id表示从哪个服务（配置中心）去获取配置
 
 spring:
   application:
     name: config-client
   cloud:
     config:
-      uri: http://localhost:8769
       fail-fast: true
+      discovery:
+        enabled: true
+        service-id: config-server
   profiles:
     active: dev
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
 

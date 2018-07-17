@@ -5,7 +5,7 @@
 
     <parent>
         <groupId>com.heller.spring.cloud</groupId>
-        <artifactId>ch10-se2</artifactId>
+        <artifactId>ch10-se3</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>..</relativePath>
     </parent>
@@ -31,6 +31,10 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
     </dependencies>
 
