@@ -29,7 +29,8 @@ eureka:
     service-url:
       default-zone: http://localhost:8761/eureka/
 
-# 打开/actuator/bus-refresh端点，接收配置刷新请求 (management.endpoints.web.exposure.include=bus-refresh)
+# 打开/actuator/bus-refresh 端点，接收配置刷新请求 (management.endpoints.web.exposure.include=bus-refresh)
+# /actuator/bus-refresh 端点 只接受POST请求（安全原因）
 management:
   endpoints:
     web:
