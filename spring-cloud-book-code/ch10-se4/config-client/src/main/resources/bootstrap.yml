@@ -18,9 +18,21 @@ spring:
         service-id: config-server
   profiles:
     active: dev
+  rabbitmq: # 加入rabbitmq的配置（使用本地安装的rabbitmq）
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 eureka:
   client:
     service-url:
       default-zone: http://localhost:8761/eureka/
+
+# 打开/actuator/bus-refresh端点，接收配置刷新请求 (management.endpoints.web.exposure.include=bus-refresh)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
 
