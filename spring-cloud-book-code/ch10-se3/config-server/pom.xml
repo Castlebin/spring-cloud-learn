@@ -5,7 +5,7 @@
 
     <parent>
         <groupId>com.heller.spring.cloud</groupId>
-        <artifactId>ch10-se2</artifactId>
+        <artifactId>ch10-se3</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>..</relativePath>
     </parent>
@@ -25,6 +25,12 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
+
+        <!-- Eureka Client，将Config Server也注册到Eureka Server，从而达到高可用 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
     </dependencies>
 
