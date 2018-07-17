@@ -1,0 +1,15 @@
+# spring.application.name 配置了程序的名字
+# spring.cloud.config.uri=http://localhost:8769  表示从这里去读取配置
+# spring.profiles.active=dev  表示读取dev后缀的配置文件
+# ${spring.application.name}-${spring.profiles.active} 就是要读取的配置文件的完整名字，本例中就是config-client-dev.yml
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      uri: http://localhost:8769
+      fail-fast: true
+  profiles:
+    active: dev
+

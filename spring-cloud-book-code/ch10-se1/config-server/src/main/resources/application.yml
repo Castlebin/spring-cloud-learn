@@ -1,0 +1,16 @@
+server:
+  port: 8769
+
+# spring.profiles.active=native 表示从本地读取配置
+# spring.cloud.config.server.native.search-locations=classpath:/shared 表示从classpath下的/shared目录查找配置文件
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared
+
