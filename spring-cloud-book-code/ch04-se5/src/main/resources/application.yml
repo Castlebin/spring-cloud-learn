@@ -1,0 +1,11 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    #driver-class-name: com.mysql.jdbc.Driver  # 不需要设置，会根据url推断出来
+    url: jdbc:mysql://localhost:3306/spring-cloud-book?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: 123456
+  jpa:
+    show-sql: true
+
