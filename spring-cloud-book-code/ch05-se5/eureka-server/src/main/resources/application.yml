@@ -1,8 +1,30 @@
+# http://cloud.spring.io/spring-cloud-static/spring-cloud-netflix/2.0.0.RELEASE/multi/multi_spring-cloud-eureka-server.html
+---
+spring:
+   profiles: peer1
+   application:
+     name: eureka-server
 server:
-  port: 8761
-
+   port: 8761
 eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
+   instance:
+      hostname: peer1
+   client:
+      serviceUrl:
+         defaultZone: http://peer2:8762/eureka/
+
+
+---
+spring:
+   profiles: peer2
+   application:
+        name: eureka-server
+server:
+   port: 8762
+eureka:
+   instance:
+      hostname: peer2
+   client:
+      serviceUrl:
+         defaultZone: http://peer1:8761/eureka/
 
