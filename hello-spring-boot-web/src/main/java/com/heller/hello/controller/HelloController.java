@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 @RequestMapping("/hello")
 @RestController
 public class HelloController {
@@ -20,6 +22,7 @@ public class HelloController {
         User user = new User();
         user.setUsername(username);
         user.setId(1L);
+        user.setBirthday(new Date());
 
         return user;
     }
