@@ -21,6 +21,7 @@
     <modules>
         <module>eureka-server</module>
         <module>config-server</module>
+        <module>eureka-client</module>
     </modules>
 
     <properties>
