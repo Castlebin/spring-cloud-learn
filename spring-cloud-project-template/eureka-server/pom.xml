@@ -21,7 +21,11 @@
     </properties>
 
     <dependencies>
-
+        <!-- Spring Cloud 相关配置 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
