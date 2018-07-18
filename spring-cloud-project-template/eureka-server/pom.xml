@@ -21,7 +21,13 @@
     </properties>
 
     <dependencies>
-        <!-- Spring Cloud 相关配置 -->
+        <!-- Spring Boot 相关包-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- Spring Cloud 包 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
