@@ -1,9 +1,11 @@
 package com.heller.hello.controller;
 
+import com.heller.hello.service.HomeService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -29,6 +31,9 @@ public class HelloControllerWebLayerTest {
 
     @Autowired
     private MockMvc mockMvc;
+
+    @MockBean
+    private HomeService homeService;
 
     @Test
     public void shouldReturnDefaultMessage() throws Exception {
