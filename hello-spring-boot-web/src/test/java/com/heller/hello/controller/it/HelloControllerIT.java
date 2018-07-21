@@ -17,6 +17,7 @@ import static org.junit.Assert.assertThat;
 
 /**
  * HelloController的集成测试，IT, integration test
+ * 在一个随机端口启动web容器
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
