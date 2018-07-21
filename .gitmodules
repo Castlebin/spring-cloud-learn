@@ -7,3 +7,6 @@
 [submodule "starter/mybatis-starter"]
 	path = starter/mybatis-starter
 	url = git@github.com:mybatis/spring-boot-starter.git
+[submodule "starter/dubbo-starter"]
+	path = starter/dubbo-starter
+	url = git@github.com:apache/incubator-dubbo-spring-boot-project.git
