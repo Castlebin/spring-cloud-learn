@@ -1,11 +1,9 @@
 package com.heller.hello.controller;
 
-import com.heller.hello.service.HomeService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -24,16 +22,15 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * 这两个注解，同样是不启动完整的web服务来测试web层
  *
  * 一种简化
+ *
+ * 注意在@WebMvcTest中指定了要mock的类，必须
  */
 @RunWith(SpringRunner.class)
-@WebMvcTest
+@WebMvcTest(HelloController.class)
 public class HelloControllerWebLayerTest {
 
     @Autowired
     private MockMvc mockMvc;
-
-    @MockBean
-    private HomeService homeService;
 
     @Test
     public void shouldReturnDefaultMessage() throws Exception {
