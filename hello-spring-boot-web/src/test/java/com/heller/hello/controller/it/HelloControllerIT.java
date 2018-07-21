@@ -19,6 +19,8 @@ import static org.junit.Assert.assertThat;
  * HelloController的集成测试，IT, integration test
  * 在一个随机端口启动web容器，启动了完整的web服务
  *
+ * In this test, the full Spring application context is started, but without the server.
+ *
  * Note the use of webEnvironment=RANDOM_PORT to start the server with a random port
  * (useful to avoid conflicts in test environments),
  * and the injection of the port with @LocalServerPort.
