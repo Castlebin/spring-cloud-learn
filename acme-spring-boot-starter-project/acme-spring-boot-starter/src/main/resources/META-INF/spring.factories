@@ -1,0 +1,2 @@
+# 4. 创建spring.factories文件，定义EnableAutoConfiguration启动类
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.heller.acme.DataSourceAutoConfiguration
