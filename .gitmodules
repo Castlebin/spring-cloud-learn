@@ -4,3 +4,6 @@
 [submodule "config-repo"]
 	path = config-repo
 	url = git@github.com:Castlebin/config-repo.git
+[submodule "starter/mybatis-starter"]
+	path = starter/mybatis-starter
+	url = git@github.com:mybatis/spring-boot-starter.git
