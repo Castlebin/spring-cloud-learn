@@ -3,7 +3,7 @@ spring:
     name: user-service
   # zipkin 配置
   zipkin:
-    base-url: http://localhost:9441/zipkin/
+    base-url: http://localhost:9441/
   sleuth:
     sampler:
       probability: 1.0  # 配置采样比例为100%，默认值为0.1 实践中根据需要调整
