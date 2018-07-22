@@ -22,6 +22,7 @@
         <module>eureka-server</module>
         <module>zipkin-server</module>
         <module>user-service</module>
+        <module>gateway-service</module>
     </modules>
 
     <properties>
