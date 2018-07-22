@@ -10,3 +10,6 @@
 [submodule "starter/dubbo-starter"]
 	path = starter/dubbo-starter
 	url = git@github.com:apache/incubator-dubbo-spring-boot-project.git
+[submodule "spring-cloud-study"]
+	path = spring-cloud-study
+	url = git@github.com:zhaoyibo/spring-cloud-study.git
