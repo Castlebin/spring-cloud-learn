@@ -20,10 +20,8 @@
 
     <modules>
         <module>eureka-server</module>
-        <module>zipkin-server</module>
-        <module>gateway-service</module>
-        <module>user-service</module>
         <module>auth-service</module>
+        <module>admin-server</module>
     </modules>
 
     <properties>
